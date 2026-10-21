@@ -1,9 +1,10 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// Served from the apex custom domain (67sixseven.xyz), so assets live at the root.
+// Relative asset paths so the same build works at the custom domain root and at
+// the GitHub Pages project URL (mzeils.github.io/sixseven-site/).
 export default defineConfig({
-  base: '/',
+  base: './',
   plugins: [react()],
   build: { target: 'es2020' }
 });
