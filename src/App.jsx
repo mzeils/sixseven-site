@@ -1,9 +1,8 @@
-import Aurora from './components/Aurora.jsx';
+import GradientASCII from './components/GradientASCII.jsx';
 import ClickSpark from './components/ClickSpark.jsx';
 import DecryptedText from './components/DecryptedText.jsx';
 import ShinyText from './components/ShinyText.jsx';
 
-const APP = 'https://afc-rewards-645918633936.australia-southeast1.run.app';
 const EMAIL = 'info@67sixseven.xyz';
 
 const FEATURES = [
@@ -40,13 +39,12 @@ export default function App() {
         <main id="top">
           <section className="hero" aria-labelledby="hero-title">
             <div className="hero-bg" aria-hidden="true">
-              <Aurora
-                colorStops={['#3a1cff', '#2fe6b8', '#9b5cff']}
-                amplitude={1.1}
-                blend={0.6}
-                height={0.5}
-                speed={0.6}
-                layers={2}
+              <GradientASCII
+                colors={['#3a1cff', '#9b5cff', '#2fe6b8', '#f6f8ff']}
+                shape="horizon"
+                characters=" =+xX0S8#@67"
+                cellSize={18}
+                density={0.8}
               />
             </div>
             <div className="hero-inner">
@@ -71,9 +69,6 @@ export default function App() {
               </h1>
               <p className="lede">We build fan rewards apps for sports clubs.</p>
               <div className="ctas">
-                <a className="btn btn-primary" href={`${APP}/get-app`}>
-                  See AFC Rewards
-                </a>
                 <a className="btn btn-ghost" href={`mailto:${EMAIL}`}>
                   Talk to us
                 </a>
@@ -101,11 +96,8 @@ export default function App() {
               <p className="kicker">Our first app</p>
               <h2 id="afc-title">AFC Rewards</h2>
               <p>
-                A rewards app for Auckland FC supporters. Available on iPhone, Android and the web.
+                A rewards app for Auckland FC supporters, coming soon to iPhone.
               </p>
-              <a className="btn btn-primary" href={`${APP}/get-app`}>
-                Get the app
-              </a>
             </div>
           </section>
 
@@ -126,9 +118,9 @@ export default function App() {
           <p>Six Seven Ltd, New Zealand</p>
           <nav aria-label="Legal and support">
             <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
-            <a href={`${APP}/privacy`}>Privacy</a>
-            <a href={`${APP}/terms`}>Terms</a>
-            <a href={`${APP}/support`}>Support</a>
+            <a href="/privacy/">Privacy</a>
+            <a href="/terms/">Terms</a>
+            <a href="/support/">Support</a>
           </nav>
         </footer>
       </div>
